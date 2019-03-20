@@ -131,8 +131,16 @@
                         <configuration>
                             <relocations>
                                 <relocation>
-                                    <pattern>org.apache</pattern>
-                                    <shadedPattern>ujagent_shaded.org.apache</shadedPattern>
+                                    <pattern>org.apache.kafka</pattern>
+                                    <shadedPattern>ujagent_shaded.org.apache.kafka</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.apache.commons</pattern>
+                                    <shadedPattern>ujagent_shaded.org.apache.commons</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.apache.httpcomponents</pattern>
+                                    <shadedPattern>ujagent_shaded.org.apache.httpcomponents</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.fasterxml</pattern>
@@ -421,6 +429,7 @@
                     <groupId>org.apache.hadoop</groupId>
                     <artifactId>hadoop-client</artifactId>
                     <version>2.6.0-cdh5.13.2</version>
+                    <scope>provided</scope>
                     <exclusions>
                         <exclusion>
                             <groupId>org.apache.hadoop</groupId>
